@@ -8,6 +8,7 @@ import { useConfig } from "nextra-theme-docs";
 // title: REST Architecture
 // seoTitle: What is Statelessness ?
 // summary: The statelessness constraint means that the server does not store any state about the client between requests
+//language
 // ---
 
 export default {
@@ -27,12 +28,12 @@ export default {
   },
   additionalLinkTags: [
     {
-      href: "/apple-icon-180x180.png",
+      href: "/apple-touch-icon.png",
       rel: "apple-touch-icon",
       sizes: "180x180",
     },
     {
-      href: "/android-icon-192x192.png",
+      href: "/android-chrome-192x192.png",
       rel: "icon",
       sizes: "192x192",
       type: "image/png",
@@ -57,10 +58,13 @@ export default {
     },
   ],
   additionalMetaTags: [
-    { content: "en", httpEquiv: "Content-Language" },
+    {
+      content: frontMatter.language ? frontMatter.language : "en",
+      httpEquiv: "Content-Language",
+    },
     { content: "How Do I", name: "apple-mobile-web-app-title" },
     { content: "#fff", name: "msapplication-TileColor" },
-    { content: "/ms-icon-144x144.png", name: "msapplication-TileImage" },
+    { content: "/android-chrome-192x192.png", name: "msapplication-TileImage" },
   ],
   description: frontMatter.description || "How Do I?",
   openGraph: {
