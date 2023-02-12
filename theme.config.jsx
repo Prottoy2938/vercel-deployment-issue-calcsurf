@@ -68,7 +68,7 @@ export default {
   ],
   description: frontMatter.description || "How Do I?",
   openGraph: {
-    images: [{ url: frontMatter.image || "https://hwdoi.com/og.png" }],
+    images: [{ url: frontMatter.image || "https://hwdoi.com/og.jpg" }],
   },
   titleTemplate: "%s – How Do You Do",
   twitter: {
