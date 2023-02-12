@@ -16,7 +16,7 @@ export default {
     const { frontMatter } = useConfig();
     return (
       <>
-        <meta property="og:url" content={`hwdoi.com${asPath}`} />
+        <meta property="og:url" content={`https://hwdoi.com${asPath}`} />
         <meta property="og:title" content={frontMatter.title || "How Do I"} />
         <meta
           property="og:description"
@@ -64,11 +64,11 @@ export default {
   ],
   description: frontMatter.description || "How Do I?",
   openGraph: {
-    images: [{ url: frontMatter.image || "hwdoi.com/og.png" }],
+    images: [{ url: frontMatter.image || "https://hwdoi.com/og.png" }],
   },
   titleTemplate: "%s – How Do You Do",
   twitter: {
     cardType: "summary_large_image",
-    site: "hwdoi.com",
+    site: "https://hwdoi.com",
   },
 };
