@@ -8,7 +8,7 @@ import { useConfig } from "nextra-theme-docs";
 // title: REST Architecture
 // seoTitle: What is Statelessness ?
 // summary: The statelessness constraint means that the server does not store any state about the client between requests
-//language
+//language: en
 // ---
 
 export default {
@@ -70,7 +70,7 @@ export default {
   openGraph: {
     images: [{ url: frontMatter.image || "https://hwdoi.com/og.jpg" }],
   },
-  titleTemplate: "%s – How Do You Do",
+  titleTemplate: "%s – How Do I Do?",
   twitter: {
     cardType: "summary_large_image",
     site: "https://hwdoi.com",
