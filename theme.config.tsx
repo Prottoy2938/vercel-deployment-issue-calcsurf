@@ -15,7 +15,7 @@ export default {
   head: () => {
     const { asPath } = useRouter();
     const { frontMatter } = useConfig();
-    console.log(frontMatter);
+    console.log("as ", frontMatter);
     // additionalMetaTags: [
     //   {
     //     content: frontMatter.language ? frontMatter.language : "en",
@@ -44,6 +44,67 @@ export default {
         />
       </>
     );
+  },
+
+  useNextSeoProps() {
+    const { frontMatter } = useConfig();
+    const { asPath } = useRouter();
+    console.log(frontMatter);
+
+    return {
+      additionalLinkTags: [
+        {
+          href: "/apple-icon-180x180.png",
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+        },
+        {
+          href: "/android-icon-192x192.png",
+          rel: "icon",
+          sizes: "192x192",
+          type: "image/png",
+        },
+        {
+          href: "/favicon-96x96.png",
+          rel: "icon",
+          sizes: "96x96",
+          type: "image/png",
+        },
+        {
+          href: "/favicon-32x32.png",
+          rel: "icon",
+          sizes: "32x32",
+          type: "image/png",
+        },
+        {
+          href: "/favicon-16x16.png",
+          rel: "icon",
+          sizes: "16x16",
+          type: "image/png",
+        },
+      ],
+      additionalMetaTags: [
+        {
+          content: frontMatter.language ? frontMatter.language : "en",
+          httpEquiv: "Content-Language",
+        },
+        { content: "How Do I", name: "apple-mobile-web-app-title" },
+        { content: "#fff", name: "msapplication-TileColor" },
+        {
+          content: "/android-chrome-192x192.png",
+          name: "msapplication-TileImage",
+        },
+      ],
+      description: frontMatter.description || "How Do I?",
+      openGraph: {
+        images: [{ url: frontMatter.image || "https://hwdoi.com/og.jpg" }],
+      },
+      titleTemplate: "%s – How Do I Do?",
+      twitter: {
+        cardType: "summary_large_image",
+        site: "https://hwdoi.com",
+      },
+    };
   },
   additionalLinkTags: [
     {
@@ -82,7 +143,7 @@ export default {
     { locale: "ak", text: "Akan" },
     { locale: "sq", text: "Albanian" },
     { locale: "am", text: "Amharic" },
-    { locale: "ar", text: "Arabic" },
+    { locale: "ar", text: "Arabic", direction: "rtl" },
     { locale: "hy", text: "Armenian" },
     { locale: "as", text: "Assamese" },
     { locale: "ay", text: "Aymara" },

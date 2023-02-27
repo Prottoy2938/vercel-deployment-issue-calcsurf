@@ -1,39 +1,20 @@
+---
+title: my blog test
+date: 2021/3/27
+tag: code, tech
+author: Luca Nerlich
+description: test description
+image: /images/blog/test.jpg
+---
+
+# Hello World
+
 import { Card, Cards } from "../components/card-component/card-component";
 import CalcComponent from "../components/calc-component/calc-component";
 import GifPlayer from "../components/gifplayer/gifplayer";
 import AdsComponent from "../components/adscomponent/adscomponent";
 import RelatedBlogPosts from "../components/relatedblogpost/relatedblogpost";
 import YTVideoPlayer from "../components/ytvideoplayer/ytvideoplayer";
-
-```
-published: true
-publishedAt: "2023-1-19"
-updatedAt: "2023-1-19"
-title: How Do I Calculate Molar Mass
-seoTitle: How Do I Calculate Molar Mass
-summary: A blog talks about how to calculate molar mass of a calculator
-description: A blog talks about how to calculate molar mass of a calculator
-language: en
-```
-
-import { useConfig } from "nextra-theme-docs";
-
-export function FrontMatter({ prop }) {
-  const config = useConfig();
-  return config.frontMatter[prop];
-}
-
-<FrontMatter
-  prop="summary"
-  published={true}
-  publishedAt="2023-1-19"
-  description="A blog talks about how to calculate molar mass of a calculator"
-  summary="A blog talks about how to calculate molar mass of a calculator"
-  language="en"
-  updatedAt="2023-1-19"
-  title="How Do I Calculate Molar Mass"
-  seoTitle="How Do I Calculate Molar Mass"
-/>
 
 # How Do I Calculate Molar Mass
 
@@ -150,3 +131,16 @@ Molar mass is an important concept in chemistry and plays an important role in c
 <Card icon={"<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-6 h-6'><path strokeLinecap='round' strokeLinejoin='round' d='M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z'</svg>"} title='hello' href='/en/chemistry/hello-world'/>
 <Card icon={"<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-6 h-6'><path strokeLinecap='round' strokeLinejoin='round' d='M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z'</svg>"} title='click here' href='/en/world-cup-mania'/>
 </Cards>
+
+---
+
+    published: true
+    publishedAt: "2023-1-19"
+    updatedAt: "2023-1-19"
+    title: How Do I Calculate Molar Mass
+    seoTitle: How Do I Calculate Molar Mass
+    summary: A blog talks about how to calculate molar mass of a calculator
+    description: A blog talks about how to calculate molar mass of a calculator
+    language: en
+
+---
