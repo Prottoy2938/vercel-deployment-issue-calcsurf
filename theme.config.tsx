@@ -27,16 +27,16 @@ export default {
     // ],
     // description: frontMatter.description || "How Do I?",
     // openGraph: {
-    //   images: [{ url: frontMatter.image || "https://hwdoi.com/og.jpg" }],
+    //   images: [{ url: frontMatter.image || "https://calcsurf.com/og.jpg" }],
     // },
     // titleTemplate: "%s – How Do I Do?",
     // twitter: {
     //   cardType: "summary_large_image",
-    //   site: "https://hwdoi.com",
+    //   site: "https://calcsurf.com",
     // },
     return (
       <>
-        <meta property="og:url" content={`https://hwdoi.com${asPath}`} />
+        <meta property="og:url" content={`https://calcsurf.com${asPath}`} />
         <meta property="og:title" content={frontMatter.title || "How Do I"} />
         <meta
           property="og:description"
@@ -97,12 +97,12 @@ export default {
       ],
       description: frontMatter.description || "How Do I?",
       openGraph: {
-        images: [{ url: frontMatter.image || "https://hwdoi.com/og.jpg" }],
+        images: [{ url: frontMatter.image || "https://calcsurf.com/og.jpg" }],
       },
       titleTemplate: "%s – How Do I Do?",
       twitter: {
         cardType: "summary_large_image",
-        site: "https://hwdoi.com",
+        site: "https://calcsurf.com",
       },
     };
   },
